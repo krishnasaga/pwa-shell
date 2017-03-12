@@ -36,22 +36,23 @@ const config = {
 			test: /\.(js|jsx)?$/,
 			exclude: /node_modules/,
 			loaders: ['babel-loader'],
-		},{
+		},
+		{
 			test: /\.scss$/,
-			loaders: ['file-loader','css-loader','sass-loader'],
-		}, {
-			test: /\.css$/,
 			loader: ExtractTextPlugin.extract({
 				fallback: 'style-loader',
+				filename: '[name].css',
 				use: combineLoaders([{
 					loader: 'css-loader',
 					query: {
-						modules: true,
 						localIdentName: '[name]__[local]___[hash:base64:5]',
-						minimize: isProd,
+						minimize: true,
 					},
 				}, {
-					loader: 'postcss-loader',
+					loader: 'sass-loader',
+					optinos: {
+					  includePaths: 'node_modules'
+					}
 				}]),
 			}),
 		}],
@@ -71,7 +72,7 @@ const config = {
 		}),
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		new webpack.NoEmitOnErrorsPlugin(),
-		new ExtractTextPlugin('styles.css'),
+		new ExtractTextPlugin('shell.css'),
 	],
 	resolve: {
 		modules: ['node_modules', './client/src', './client/src/shared/modules'],

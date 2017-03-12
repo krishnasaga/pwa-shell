@@ -29,7 +29,7 @@ const config = {
 	output: {
 		filename: '[name].build.js',
 		path: path.join(__dirname, 'docs'),
-		publicPath: '/docs',
+		publicPath: '/pwa-shell',
 	},
 	module: {
 		loaders: [{

@@ -1,0 +1,17 @@
+{
+  "name": "Super Fast App Shell",
+  "short_name": "Super Fast",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Fastest and smart app shell",
+  "icons": [{
+    "src": "images/touch/homescreen48.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "images/touch/homescreen72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }]
+}

@@ -8,7 +8,7 @@ const combineLoaders = require('webpack-combine-loaders');
 const NODE_ENV = process.env.NODE_ENV;
 const isDev = NODE_ENV === 'development';
 const isProd = NODE_ENV === 'production';
-
+const ManifestPlugin = require('webpack-manifest-plugin');
 // import .env variables to global space
 const dotEnvVars = dotenv.config().parsed;
 const defines =
@@ -36,6 +36,11 @@ const config = {
 			test: /\.(js|jsx)?$/,
 			exclude: /node_modules/,
 			loaders: ['babel-loader'],
+		},
+		{
+			test: /\.(png|jpg)?$/,
+			exclude: /node_modules/,
+			loaders: ['file-loader?name=[name].[ext]'],
 		},
 		{
 			test: /\.scss$/,
@@ -72,7 +77,7 @@ const config = {
 		}),
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		new webpack.NoEmitOnErrorsPlugin(),
-		new ExtractTextPlugin('shell.css'),
+		new ExtractTextPlugin('shell.css')
 	],
 	resolve: {
 		modules: ['node_modules', './client/src', './client/src/shared/modules'],

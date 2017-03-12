@@ -5,13 +5,11 @@
   "display": "standalone",
   "background_color": "#fff",
   "description": "Fastest and smart app shell",
-  "icons": [{
-    "src": "images/touch/homescreen48.png",
-    "sizes": "48x48",
-    "type": "image/png"
-  }, {
-    "src": "images/touch/homescreen72.png",
-    "sizes": "72x72",
-    "type": "image/png"
-  }]
+  "icons": [
+    {
+      "src": "speed.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

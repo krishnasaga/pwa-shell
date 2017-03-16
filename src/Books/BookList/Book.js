@@ -8,7 +8,7 @@ export default class Book extends React.Component {
     <h2 className="mdl-card__title-text"> { this.props.title } </h2>
   </div>
   <div className="mdl-card__media">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/41TINACY3hL._UY250_.jpg" width="220" height="140" border="0" alt="" style="padding:20px;" />
+    <img src="https://images-na.ssl-images-amazon.com/images/I/41TINACY3hL._UY250_.jpg" width="220" height="140" border="0" alt=""  />
   </div>
   <div className="mdl-card__supporting-text">
     This text might describe the photo and provide further information, such as where and

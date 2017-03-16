@@ -24,7 +24,8 @@ const defines =
 
 const config = {
 	entry: {
-	  shell: './src/shell.js'
+	  shell: './src/shell.js',
+	  content: './src/content.js'
 	},
 	output: {
 		filename: '[name].build.js',

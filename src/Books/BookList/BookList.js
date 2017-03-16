@@ -4,7 +4,7 @@ import Book from './Book.js'
 export default class BookList extends React.Component {
   render(){
     return (
-	  <div>{ props.list.map( () => { return <Book/>; } ) }</div>
+	  <div>{ this.props.list.map( () => { return <Book/>; } ) }</div>
 	);
   }
 }

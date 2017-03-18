@@ -30,7 +30,7 @@ const config = {
 	output: {
 		filename: '[name].build.js',
 		path: path.join(__dirname, 'docs'),
-		publicPath: '/pwa-shell',
+		publicPath: '.',
 	},
 	module: {
 		loaders: [{
@@ -78,7 +78,7 @@ const config = {
 		}),
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		new webpack.NoEmitOnErrorsPlugin(),
-		new ExtractTextPlugin('shell.css')
+		new ExtractTextPlugin({ filename: '[name].css' } )
 	],
 	resolve: {
 		modules: ['node_modules', './client/src', './client/src/shared/modules'],

@@ -10,5 +10,8 @@
     "src": "./assets/speed.png",
     "sizes": "512x512",
     "type": "image/png"
-  }]
+  }],
+  "dir": "ltr",
+  "lang": "en",
+  ​​"orientation": "portrait-primary"
 }
